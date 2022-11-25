@@ -3,7 +3,7 @@ yum install -y nginx
 systemctl start nginx
 systemctl enable nginx
 git clone https://github.com/Kingkellee/Kolture-project-config.git
-mv /ACS-project-config/reverse.conf /etc/nginx/
+mv /Kolture-project-config/reverse.conf /etc/nginx/
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf-distro
 cd /etc/nginx/
 touch nginx.conf
