@@ -13,7 +13,7 @@ git clone https://github.com/Kingkellee/tooling-1.git
 mkdir /var/www/html
 cp -R /tooling-1/html/* /var/www/html/
 cd /tooling-1
-mysql -h kolture-database.cxk41b4mvqik.us-east-1.rds.amazonaws.com -u ACSadmin -p toolingdb < tooling-db.sql
+mysql -h kolture-database.cxk41b4mvqik.us-east-1.rds.amazonaws.com -u admin -p toolingdb < tooling-db.sql
 cd /var/www/html/
 touch healthstatus
 sed -i "s/$db = mysqli_connect('mysql.tooling.svc.cluster.local', 'admin', 'admin', 'tooling');/$db = mysqli_connect('kolture-database.cxk41b4mvqik.us-east-1.rds.amazonaws.com', 'admin', 'password', 'toolingdb');/g" functions.php
