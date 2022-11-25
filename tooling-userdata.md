@@ -11,7 +11,7 @@ systemctl start php-fpm
 systemctl enable php-fpm
 git clone https://github.com/Kingkellee/tooling-1.git
 mkdir /var/www/html
-cp -R /tooling-1/html/\* /var/www/html/
+cp -R /tooling-1/html/* /var/www/html/
 cd /tooling-1
 mysql -h kolture-database.cxk41b4mvqik.us-east-1.rds.amazonaws.com -u ACSadmin -p toolingdb < tooling-db.sql
 cd /var/www/html/
