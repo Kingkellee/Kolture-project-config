@@ -14,7 +14,7 @@ tar xzvf latest.tar.gz
 rm -rf latest.tar.gz
 cp wordpress/wp-config-sample.php wordpress/wp-config.php
 mkdir /var/www/html/
-cp -R /wordpress/\* /var/www/html/
+cp -R /wordpress/* /var/www/html/
 cd /var/www/html/
 touch healthstatus
 sed -i "s/localhost/kolture-database.cxk41b4mvqik.us-east-1.rds.amazonaws.com/g" wp-config.php
