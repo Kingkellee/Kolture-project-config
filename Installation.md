@@ -10,20 +10,22 @@
 
 ---
 
-yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+```
+yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-9.rpm
 yum install wget vim python3 telnet htop git mysql net-tools chrony -y
 systemctl start chronyd
 systemctl enable chronyd
+```
 
 # Nginx ami installation
 
 ---
 
 ```
-yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 
-yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-9.rpm
 
 yum install wget vim python3 telnet htop git mysql net-tools chrony -y
 
@@ -72,9 +74,9 @@ sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 # webserver ami installation
 
 ```
-yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 
-yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-9.rpm
 
 yum install wget vim python3 telnet htop git mysql net-tools chrony -y
 
@@ -120,7 +122,7 @@ vi /etc/httpd/conf.d/ssl.conf
 
 # Login into the RDS instnace and create database for wordpress and tooling wordpress and tooling database
 
-mysql -h acs-database.cdqpbjkethv0.us-east-1.rds.amazonaws.com -u ACSadmin -p
+mysql -h kolture-database.cxk41b4mvqik.us-east-1.rds.amazonaws.com -u admin -p
 
 CREATE DATABASE toolingdb;
 CREATE DATABASE wordpressdb;
